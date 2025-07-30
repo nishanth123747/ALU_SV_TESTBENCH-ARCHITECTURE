@@ -7,13 +7,6 @@ interface alu_if (input bit CLK ,input bit RST);
   logic [`CMD_WIDTH-1:0] CMD;
   logic ERR, OFLOW, COUT, G, L, E;
 
-  //`ifdef MUL
-  //  logic [2*WIDTH:0] RES;
- // `else
-  logic [`WIDTH:0] RES;
-  //`endif
-
-
   clocking drv_cb @(posedge CLK);
     default input #0 output #0;
 
